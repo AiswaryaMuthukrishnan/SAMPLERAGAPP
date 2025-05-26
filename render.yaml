@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: rag-bot
+    env: python
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: GOOGLE_API_KEY
+        value: AIzaSyDTAPaA9nyfl-WlaFkEVOvHftT6euHVQKQ
